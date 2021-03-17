@@ -13,10 +13,14 @@ public class EmailRest {
 	
 	@Autowired
 	private EmailPort emailPort;
+	@Autowired
+	EmailCuerpoServiceApi emailCuerpoServiceApi;
 	
 	@PostMapping(value = "/send")
 	@ResponseBody
 	public boolean SendEmail(@RequestBody EmailBody emailBody)  {
+		
+		emailCuerpoServiceApi.save(emailBody);
 		return emailPort.sendEmail(emailBody);
 	}
 	
