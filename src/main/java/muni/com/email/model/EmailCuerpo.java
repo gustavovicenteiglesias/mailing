@@ -66,14 +66,14 @@ public class EmailCuerpo implements Serializable {
 
 
 
-	public String getApellido() {
+	public String getIp() {
 		return ip;
 	}
 
 
 
 
-	public void setApellido(String ip) {
+	public void setIp(String ip) {
 		this.ip = ip;
 	}
 
@@ -131,9 +131,10 @@ public class EmailCuerpo implements Serializable {
 
 	@Override
 	public String toString() {
-		return "EmailCuerpo [idCuerpo=" + idCuerpo + ", nombre=" + nombre + ", ip=" + ip + ", telefono="
-				+ telefono + ", email=" + email + ", texto=" + texto + "]";
+		return "EmailCuerpo [idCuerpo=" + idCuerpo + ", nombre=" + nombre + ", ip=" + ip + ", telefono=" + telefono
+				+ ", email=" + email + ", texto=" + texto + "]";
 	}
+
 
 	
 }
