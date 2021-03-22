@@ -1,4 +1,4 @@
-package jeferagudeloc.api.email.rest;
+package muni.com.email.Service;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+
+import muni.com.email.model.EmailBody;
 
 @Service
 public class EmailService implements EmailPort{

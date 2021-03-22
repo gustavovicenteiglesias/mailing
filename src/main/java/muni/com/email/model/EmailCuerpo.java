@@ -1,18 +1,17 @@
-package jeferagudeloc.api.email.rest;
+package muni.com.email.model;
 
 import java.io.Serializable;
 
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+
 import javax.persistence.Table;
 
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
+
 
 @Entity
 @Table (name = "cuerpo")
@@ -24,7 +23,7 @@ public class EmailCuerpo implements Serializable {
     private Integer idCuerpo;
 	
 	private String nombre;
-	private String apellido;
+	private String ip;
 	private String telefono;
 	private String email;
 	private String texto;
@@ -68,14 +67,14 @@ public class EmailCuerpo implements Serializable {
 
 
 	public String getApellido() {
-		return apellido;
+		return ip;
 	}
 
 
 
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setApellido(String ip) {
+		this.ip = ip;
 	}
 
 
@@ -132,7 +131,7 @@ public class EmailCuerpo implements Serializable {
 
 	@Override
 	public String toString() {
-		return "EmailCuerpo [idCuerpo=" + idCuerpo + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono="
+		return "EmailCuerpo [idCuerpo=" + idCuerpo + ", nombre=" + nombre + ", ip=" + ip + ", telefono="
 				+ telefono + ", email=" + email + ", texto=" + texto + "]";
 	}
 

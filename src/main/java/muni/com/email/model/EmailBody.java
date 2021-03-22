@@ -1,4 +1,4 @@
-package jeferagudeloc.api.email.rest;
+package muni.com.email.model;
 
 import java.io.Serializable;
 

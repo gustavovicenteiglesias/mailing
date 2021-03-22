@@ -1,8 +1,11 @@
-package jeferagudeloc.api.email.rest;
+package muni.com.email.Service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import muni.com.email.Dao.EmailCuerpoDao;
+import muni.com.email.model.EmailBody;
 
 public class EmailCuerpoImpl implements EmailCuerpoDao {
 	@Autowired
