@@ -8,11 +8,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>jeferagudeloc.api</groupId>
+	<groupId>muni.com</groupId>
 	<artifactId>email</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>email</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Consulta Sanear</description>
 
 	<properties>
 		<java.version>1.8</java.version>
