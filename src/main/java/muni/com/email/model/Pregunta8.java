@@ -9,8 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table (name = "pregunta4")
-public class Pregunta4 implements Serializable {
+@Table (name = "pregunta8")
+public class Pregunta8 implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +18,7 @@ public class Pregunta4 implements Serializable {
     private Integer id;
 	private Long cantidad;
 	
-	public Pregunta4() {
+	public Pregunta8() {
 		super();
 	}
 
@@ -44,8 +44,10 @@ public class Pregunta4 implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Pregunta4 [id=" + id + ", cantidad=" + cantidad + "]";
+		return "Pregunta8 [id=" + id + ", cantidad=" + cantidad + "]";
 	}
+
+	
 	
 	
 	

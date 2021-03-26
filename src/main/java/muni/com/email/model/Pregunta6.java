@@ -44,8 +44,10 @@ public class Pregunta6 implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Pregunta1 [id=" + id + ", cantidad=" + cantidad + "]";
+		return "Pregunta6 [id=" + id + ", cantidad=" + cantidad + "]";
 	}
+
+	
 	
 	
 	

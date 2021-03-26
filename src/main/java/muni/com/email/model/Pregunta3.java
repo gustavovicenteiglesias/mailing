@@ -44,7 +44,7 @@ public class Pregunta3 implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Pregunta1 [id=" + id + ", cantidad=" + cantidad + "]";
+		return "Pregunta3 [id=" + id + ", cantidad=" + cantidad + "]";
 	}
 	
 	

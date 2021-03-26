@@ -17,18 +17,28 @@ import org.springframework.web.bind.annotation.RestController;
 import muni.com.email.Service.EmailCuerpoServiceApi;
 import muni.com.email.Service.EmailPort;
 import muni.com.email.Service.ServiceAPIPregunta1;
+import muni.com.email.Service.ServiceAPIPregunta10;
+import muni.com.email.Service.ServiceAPIPregunta11;
 import muni.com.email.Service.ServiceAPIPregunta2;
 import muni.com.email.Service.ServiceAPIPregunta3;
 import muni.com.email.Service.ServiceAPIPregunta4;
 import muni.com.email.Service.ServiceAPIPregunta5;
 import muni.com.email.Service.ServiceAPIPregunta6;
+import muni.com.email.Service.ServiceAPIPregunta7;
+import muni.com.email.Service.ServiceAPIPregunta8;
+import muni.com.email.Service.ServiceAPIPregunta9;
 import muni.com.email.model.EmailBody;
 import muni.com.email.model.Pregunta1;
+import muni.com.email.model.Pregunta10;
+import muni.com.email.model.Pregunta11;
 import muni.com.email.model.Pregunta2;
 import muni.com.email.model.Pregunta3;
 import muni.com.email.model.Pregunta4;
 import muni.com.email.model.Pregunta5;
 import muni.com.email.model.Pregunta6;
+import muni.com.email.model.Pregunta7;
+import muni.com.email.model.Pregunta8;
+import muni.com.email.model.Pregunta9;
 
 @RestController
 @RequestMapping(value = "/email")
@@ -51,7 +61,18 @@ public class EmailRest {
 	@Autowired
 	ServiceAPIPregunta5 serviceAPIPregunta5;
 	@Autowired
+	ServiceAPIPregunta7 serviceAPIPregunta7;
+	@Autowired
+	ServiceAPIPregunta8 serviceAPIPregunta8;
+	@Autowired
+	ServiceAPIPregunta9 serviceAPIPregunta9;
+	@Autowired
+	ServiceAPIPregunta10 serviceAPIPregunta10;
+	@Autowired
 	ServiceAPIPregunta6 serviceAPIPregunta6;
+	@Autowired
+	ServiceAPIPregunta11 serviceAPIPregunta11;
+	
 	
 	
 	@PostMapping(value = "/send")
@@ -109,6 +130,42 @@ public class EmailRest {
 		serviceAPIPregunta6.save(emailBody);
 		return true;
 	}
+	@PostMapping(value = "/send/pregunta7")
+	@ResponseBody
+	public boolean SendPregunta2(@RequestBody Pregunta7 emailBody)  {
+		
+		serviceAPIPregunta7.save(emailBody);
+		return true;
+	}
+	@PostMapping(value = "/send/pregunta8")
+	@ResponseBody
+	public boolean SendPregunta2(@RequestBody Pregunta8 emailBody)  {
+		
+		serviceAPIPregunta8.save(emailBody);
+		return true;
+	}
+	@PostMapping(value = "/send/pregunta9")
+	@ResponseBody
+	public boolean SendPregunta2(@RequestBody Pregunta9 emailBody)  {
+		
+		serviceAPIPregunta9.save(emailBody);
+		return true;
+	}
+	@PostMapping(value = "/send/pregunta10")
+	@ResponseBody
+	public boolean SendPregunta2(@RequestBody Pregunta10 emailBody)  {
+		
+		serviceAPIPregunta10.save(emailBody);
+		return true;
+	}
+	@PostMapping(value = "/send/pregunta11")
+	@ResponseBody
+	public boolean SendPregunta2(@RequestBody Pregunta11 emailBody)  {
+		
+		serviceAPIPregunta11.save(emailBody);
+		return true;
+	}
+	
 	@GetMapping(value = "/get/ultimo/pregunta1" )
 		public Map<String, Object> data1(){
 					HashMap<String,Object> response = new HashMap<String,Object>();
