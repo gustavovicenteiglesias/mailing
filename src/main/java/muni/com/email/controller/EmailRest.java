@@ -311,5 +311,126 @@ public class EmailRest {
 					return response;
 				}
 			} 
+	@GetMapping(value = "/get/ultimo/pregunta7" )
+	public Map<String, Object> data7(){
+				HashMap<String,Object> response = new HashMap<String,Object>();
+				try {   
+					Optional<Pregunta7> pregunta = serviceAPIPregunta7.findUltimo();  
+					if (pregunta.isPresent()) { 
+						response.put("message","Successful load");
+						response.put("data",pregunta);
+						response.put("success",true);
+						return response;
+					}
+					else {
+						response.put("message","Not found data");
+						response.put("data",null);
+						response.put("success",false);
+						return response;
+					}
+					
+				} catch (Exception e){ 
+					response.put("message",""+e.getMessage()); 
+					response.put("success",false);
+					return response;
+				}
+			} 
+	@GetMapping(value = "/get/ultimo/pregunta8" )
+	public Map<String, Object> data8(){
+				HashMap<String,Object> response = new HashMap<String,Object>();
+				try {   
+					Optional<Pregunta8> pregunta = serviceAPIPregunta8.findUltimo();  
+					if (pregunta.isPresent()) { 
+						response.put("message","Successful load");
+						response.put("data",pregunta);
+						response.put("success",true);
+						return response;
+					}
+					else {
+						response.put("message","Not found data");
+						response.put("data",null);
+						response.put("success",false);
+						return response;
+					}
+					
+				} catch (Exception e){ 
+					response.put("message",""+e.getMessage()); 
+					response.put("success",false);
+					return response;
+				}
+			}
+	
+	@GetMapping(value = "/get/ultimo/pregunta9" )
+	public Map<String, Object> data9(){
+				HashMap<String,Object> response = new HashMap<String,Object>();
+				try {   
+					Optional<Pregunta9> pregunta = serviceAPIPregunta9.findUltimo();  
+					if (pregunta.isPresent()) { 
+						response.put("message","Successful load");
+						response.put("data",pregunta);
+						response.put("success",true);
+						return response;
+					}
+					else {
+						response.put("message","Not found data");
+						response.put("data",null);
+						response.put("success",false);
+						return response;
+					}
+					
+				} catch (Exception e){ 
+					response.put("message",""+e.getMessage()); 
+					response.put("success",false);
+					return response;
+				}
+			} 
+	@GetMapping(value = "/get/ultimo/pregunta10" )
+	public Map<String, Object> data10(){
+				HashMap<String,Object> response = new HashMap<String,Object>();
+				try {   
+					Optional<Pregunta10> pregunta = serviceAPIPregunta10.findUltimo();  
+					if (pregunta.isPresent()) { 
+						response.put("message","Successful load");
+						response.put("data",pregunta);
+						response.put("success",true);
+						return response;
+					}
+					else {
+						response.put("message","Not found data");
+						response.put("data",null);
+						response.put("success",false);
+						return response;
+					}
+					
+				} catch (Exception e){ 
+					response.put("message",""+e.getMessage()); 
+					response.put("success",false);
+					return response;
+				}
+			} 
+	@GetMapping(value = "/get/ultimo/pregunta11" )
+	public Map<String, Object> data11(){
+				HashMap<String,Object> response = new HashMap<String,Object>();
+				try {   
+					Optional<Pregunta11> pregunta = serviceAPIPregunta11.findUltimo();  
+					if (pregunta.isPresent()) { 
+						response.put("message","Successful load");
+						response.put("data",pregunta);
+						response.put("success",true);
+						return response;
+					}
+					else {
+						response.put("message","Not found data");
+						response.put("data",null);
+						response.put("success",false);
+						return response;
+					}
+					
+				} catch (Exception e){ 
+					response.put("message",""+e.getMessage()); 
+					response.put("success",false);
+					return response;
+				}
+			} 
 	
 }
