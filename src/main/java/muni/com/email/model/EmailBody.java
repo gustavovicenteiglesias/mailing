@@ -37,7 +37,7 @@ public class EmailBody implements Serializable{
 	public EmailBody() {
 		super();
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}

@@ -23,17 +23,21 @@ public class EmailService implements EmailPort{
 	@Override
 	public boolean sendEmail(EmailBody emailBody)  {
 		LOGGER.info("EmailBody: {}", emailBody.toString());
-		return sendEmailTool(emailBody.getContent().toString(),emailBody.getEmail(), emailBody.getSubject());
+		return sendEmailTool(emailBody,emailBody.getEmail(), emailBody.getSubject());
+
 	}
 	
 
-	private boolean sendEmailTool(String textMessage, String email,String subject) {
+	private boolean sendEmailTool(EmailBody textMessage, String email,String subject) {
 		boolean send = false;
 		MimeMessage message = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);		
 		try {
+			
 			helper.setTo(email);
-			helper.setText(textMessage, true);
+			helper.setText("<h1 style='color: #654321;text-align: center;'>"+textMessage.getContent().getNombre()+
+					"</h1><p>"+textMessage.getContent().getTexto()+"</p>"+
+					"<a style='color: #000000' href='mailto:'"+textMessage.getContent().getEmail()+">"+textMessage.getContent().getEmail()+"</a>", true);
 			helper.setSubject(subject);
 			sender.send(message);
 			send = true;
